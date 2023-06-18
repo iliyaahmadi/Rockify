@@ -1,7 +1,8 @@
 @import '../main';
 
 .sidebar {
-  width: 240px;
+  width: 13%;
+  min-width: 210px;
   height: 650px;
   background-color: $violet-2000;
   display: flex;
