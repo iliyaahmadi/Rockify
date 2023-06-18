@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import '../styles/sidebar.scss'
+import '../styles/components/sidebar.scss'
 
 function App() {
   const [count, setCount] = useState(0)
