@@ -1,5 +1,18 @@
+@font-face {
+  font-family: Peyda;
+  src: url(./assets/fonts/Peyda-Medium.ttf);
+}
+@font-face {
+  font-family: PeydaBold;
+  src: url(./assets/fonts/Peyda-Bold.ttf);
+}
+@font-face {
+  font-family: PeydaLight;
+  src: url(./assets/fonts/peyda-light.ttf);
+}
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Peyda, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
