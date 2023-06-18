@@ -1,0 +1,14 @@
+@mixin flexCenter($direction: row) {
+  display: flex;
+  flex-direction: #{$direction};
+  @if $direction == column {
+    align-items: center;
+  } @else {
+    justify-content: center;
+  }
+}
+
+@mixin icon($width: 25px, $height: 25px) {
+  width: $width;
+  height: $height;
+}

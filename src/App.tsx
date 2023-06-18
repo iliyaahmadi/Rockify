@@ -1,14 +1,15 @@
-import { useState } from 'react'
-import './App.scss'
+import { useState } from 'react';
+import './App.scss';
+import Sidebar from './components/sidebar';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
     <>
-      <p>یووووووووووووو</p>
+      <Sidebar />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

@@ -4,11 +4,17 @@
   line-height: 1.5;
   font-weight: 400;
   color-scheme: light dark;
-  color: $dark-000;
+  color: $gray-000;
+  direction: rtl;
   background-color: $dark-900;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+}
+
+body{
+  margin: 0;
+  padding: 0;
 }

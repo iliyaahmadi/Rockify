@@ -1,0 +1,43 @@
+@import '../main';
+
+.sidebar {
+  width: 240px;
+  height: 650px;
+  background-color: $violet-2000;
+  display: flex;
+  border-radius: 10px 0 0 10px;
+  font-family: PeydaLight;
+  &__list {
+    width: 100%;
+    height: max-content;
+    padding: 56px 0;
+    scale: 0.95;
+    li {
+      height: max-content;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 8px;
+      padding: 0 30px;
+      img {
+        @include icon(25px, 25px);
+        padding-right: 5px;
+      }
+      p {
+        height: 100%;
+        padding-top: 3px;
+      }
+      &:hover {
+        opacity: 0.8;
+        cursor: pointer;
+        color: $violet-200;
+        img {
+          border-right: solid 3px $violet-200;
+        }
+      }
+    }
+    &--active {
+      color: $violet-200;
+    }
+  }
+}
