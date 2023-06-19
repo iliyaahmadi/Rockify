@@ -1,0 +1,61 @@
+@import '../main';
+
+.recent-container {
+  padding: 10px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  &__header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    div {
+      @include flexCenter();
+      align-items: center;
+      border-radius: 9px;
+      font-size: 10px;
+      height: 25px;
+      width: 65px;
+      background-color: $violet-2000;
+      &:hover {
+        opacity: 0.9;
+        cursor: pointer;
+      }
+    }
+  }
+  &__body {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.body {
+  &__item {
+    @include flexCenter(column);
+    justify-content: center;
+    width: 24%;
+    height: 140px;
+    background: rgba(131, 10, 187, 0.4);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-blend-mode: overlay;
+    border-radius: 6px;
+    p {
+      margin: 0;
+      color: $violet-200;
+    }
+    h2 {
+      margin: 0;
+    }
+    &:hover {
+      cursor: pointer;
+      opacity: 0.8;
+    }
+  }
+}
