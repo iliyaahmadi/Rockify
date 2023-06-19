@@ -1,23 +1,34 @@
+import { Link } from 'react-router-dom';
 import '../styles/components/_sidebar.scss';
 
 function App() {
   return (
     <div className="sidebar">
       <ul className="sidebar__list">
-        <li className="sidebar__list--active">
-          <img src="src\assets\icons\HomeActive.svg" alt="Home" />
-          <p>خانه</p>
-        </li>
-        <li>
-          <img src="src\assets\icons\Discover.svg" alt="Home" /> <p>جستجو</p>
-        </li>
-        <li>
-          <img src="src\assets\icons\Book.svg" alt="Home" />{' '}
-          <p>علاقه مندی ها</p>
-        </li>
-        <li>
-          <img src="src\assets\icons\Playlist.svg" alt="Home" /> <p>لیست پخش</p>
-        </li>
+        <Link to="/">
+          <li className="sidebar__list--active">
+            <img src="src\assets\icons\HomeActive.svg" alt="Home" />
+            <p>خانه</p>
+          </li>
+        </Link>
+        <Link to="/discover">
+          <li>
+            <img src="src\assets\icons\Discover.svg" alt="discover" />{' '}
+            <p>جستجو</p>
+          </li>
+        </Link>
+        <Link to="/favorites">
+          <li>
+            <img src="src\assets\icons\Book.svg" alt="favorites" />{' '}
+            <p>علاقه مندی ها</p>
+          </li>
+        </Link>
+        <Link to="/playlists">
+          <li>
+            <img src="src\assets\icons\Playlist.svg" alt="playlists" />{' '}
+            <p>لیست پخش</p>
+          </li>
+        </Link>
       </ul>
     </div>
   );
