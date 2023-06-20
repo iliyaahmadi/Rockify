@@ -13,6 +13,16 @@
   height: $height;
 }
 
-@mixin thinRoundBtn(){
+@mixin backgroundImg() {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-blend-mode: overlay;
+}
 
+@mixin blur($blur: 8px, $blurColor: rgb(0, 0, 0, 0)) {
+  position: absolute;
+  backdrop-filter: blur($blur);
+  z-index: 1;
+  background: $blurColor;
 }

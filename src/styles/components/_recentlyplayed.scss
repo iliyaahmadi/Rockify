@@ -36,22 +36,27 @@
 
 .recent-body {
   &__item {
+    position: relative;
     @include flexCenter(column);
+    @include backgroundImg();
     justify-content: center;
     width: 24%;
     height: 140px;
-    background: $image-overlay;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-blend-mode: overlay;
     border-radius: 6px;
+    z-index: 0;
+    &--blur {
+      width: 100%;
+      height: 100%;
+      @include blur(1.5px,$blur-color-purple);
+    }
     p {
       margin: 0;
       color: $violet-200;
+      z-index: 1;
     }
     h2 {
       margin: 0;
+      z-index: 1;
     }
     &:hover {
       cursor: pointer;
