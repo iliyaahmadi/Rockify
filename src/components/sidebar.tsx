@@ -4,6 +4,9 @@ import '../styles/components/_sidebar.scss';
 function App() {
   return (
     <div className="sidebar">
+      <div className="sidebar__logo">
+        <img src="src\assets\img\sidelogow.png" alt="logo" />
+      </div>
       <ul className="sidebar__list">
         <Link to="/">
           <li className="sidebar__list--active">

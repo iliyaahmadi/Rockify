@@ -13,7 +13,7 @@ function navbar(props: { title: String }) {
       />
       <img
         className="navbar__profile"
-        src="src\assets\icons\Rockify.svg"
+        src="src\assets\img\profile.jpg"
         alt="profile picture"
       />
     </div>
