@@ -8,7 +8,7 @@ import '../styles/components/_home.scss';
 function home() {
   return (
     <div className="home">
-      <Navbar />
+      <Navbar title="ظهرت بخیر, ایلیا !"/>
       <RecentlyPlayed />
       <Suggestion />
       <Popular/>

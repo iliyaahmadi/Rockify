@@ -1,9 +1,10 @@
 import '../styles/components/_discover.scss';
+import Navbar from '../components/navbar';
 
 function discover() {
   return (
     <div className="discover">
-      <h2>دسته بندی ها</h2>
+      <Navbar title="دسته بندی ها"/>
     </div>
   );
 }
