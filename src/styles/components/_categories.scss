@@ -69,13 +69,12 @@
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  max-width: 1220px;
   &__item {
     position: relative;
     @include backgroundImg();
     @include flexCenter();
     align-items: center;
-    flex: 1 0 250px;
+    flex: 1 0 290px;
     height: 140px;
     border-radius: 15px;
     p {

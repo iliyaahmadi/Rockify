@@ -1,11 +1,14 @@
 import '../styles/components/_navbar.scss';
 
-function navbar(props: { title: String }) {
-  const title = props.title;
+type NavBarProps = {
+  title: string;
+  search: boolean;
+};
 
+function navbar(props: NavBarProps) {
   return (
     <div className="navbar">
-      <p className="navbar__greeting">{title}</p>
+      <p className="navbar__greeting">{props.title}</p>
       <img
         className="navbar__notification"
         src="src\assets\icons\bell.svg"
