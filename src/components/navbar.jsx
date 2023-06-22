@@ -1,11 +1,6 @@
 import '../styles/components/_navbar.scss';
 
-type NavBarProps = {
-  title: string;
-  search: boolean;
-};
-
-function navbar(props: NavBarProps) {
+function navbar(props) {
   return (
     <div className="navbar">
       <p className="navbar__greeting">{props.title}</p>

@@ -3,7 +3,7 @@ import '../styles/components/_sidebar.scss';
 
 function sidebar() {
   //IsActive type ?????
-  const activeStyle = ({ isActive }: any) => {
+  const activeStyle = ({ isActive }) => {
     return isActive ? 'sidebar__list--active' : '';
   };
 

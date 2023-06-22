@@ -24,7 +24,7 @@ function suggestion() {
           }}
           className="suggestion-body__item"
         >
-           <div className="suggestion-body__item--blur"></div>
+          <div className="suggestion-body__item--blur"></div>
           <p>بهترین های</p>
           <h2>موسیقی پاپ</h2>
         </div>
@@ -34,7 +34,7 @@ function suggestion() {
           }}
           className="suggestion-body__item"
         >
-           <div className="suggestion-body__item--blur"></div>
+          <div className="suggestion-body__item--blur"></div>
           <p>بهترین</p>
           <h2>آرتیست های تو</h2>
         </div>
