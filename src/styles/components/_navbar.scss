@@ -18,12 +18,13 @@
     padding: 3px;
   }
   &__profile {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     padding: 3px;
+    border: 0.5px solid $gray-800;
     border-radius: 50%;
   }
-  img:hover{
+  img:hover {
     cursor: pointer;
     opacity: 0.9;
   }
