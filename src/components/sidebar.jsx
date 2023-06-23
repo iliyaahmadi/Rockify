@@ -1,4 +1,8 @@
 import { NavLink } from 'react-router-dom';
+import HomeIcon from '@mui/icons-material/Home';
+import SearchIcon from '@mui/icons-material/Search';
+import FavoriteIcon from '@mui/icons-material/Favorite';
+import LibraryBooksIcon from '@mui/icons-material/LibraryBooks';
 import '../styles/components/_sidebar.scss';
 
 function sidebar() {
@@ -15,25 +19,53 @@ function sidebar() {
       <ul className="sidebar__list">
         <NavLink to="/" className={activeStyle}>
           <li>
-            <img src="src\assets\icons\HomeActive.svg" alt="Home" />
+            <HomeIcon
+              color="white"
+              sx={{
+                '.active &': {
+                  color: '$violet-500',
+                },
+              }}
+            />
             <p>خانه</p>
           </li>
         </NavLink>
         <NavLink to="/discover" className={activeStyle}>
           <li>
-            <img src="src\assets\icons\Discover.svg" alt="discover" />{' '}
+            <SearchIcon
+              color="white"
+              sx={{
+                '.active &': {
+                  color: '$violet-500',
+                },
+              }}
+            />
             <p>جستجو</p>
           </li>
         </NavLink>
         <NavLink to="/favorites" className={activeStyle}>
           <li>
-            <img src="src\assets\icons\Book.svg" alt="favorites" />{' '}
+            <FavoriteIcon
+              color="white"
+              sx={{
+                '.active &': {
+                  color: '$violet-500',
+                },
+              }}
+            />
             <p>علاقه مندی ها</p>
           </li>
         </NavLink>
         <NavLink to="/playlists" className={activeStyle}>
           <li>
-            <img src="src\assets\icons\Playlist.svg" alt="playlists" />{' '}
+            <LibraryBooksIcon
+              color="white"
+              sx={{
+                '.active &': {
+                  color: '$violet-500',
+                },
+              }}
+            />
             <p>لیست پخش</p>
           </li>
         </NavLink>
