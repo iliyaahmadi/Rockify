@@ -55,6 +55,38 @@ function popular() {
             className="item__btn"
           />
         </div>
+        <div className="popular-body__item item">
+          <img
+            src="src\assets\img\blindinglights.jpg"
+            alt="music cover "
+            className="item__cover"
+          />
+          <div className="item__title">
+            <b>blinding lights</b>
+            <p>the weeknd</p>
+          </div>
+          <img
+            src="src\assets\icons\play.svg"
+            alt="play button"
+            className="item__btn"
+          />
+        </div>
+        <div className="popular-body__item item">
+          <img
+            src="src\assets\img\nirvana.jpg"
+            alt="music cover "
+            className="item__cover"
+          />
+          <div className="item__title">
+            <b>smells like teen spirit</b>
+            <p>nirvana</p>
+          </div>
+          <img
+            src="src\assets\icons\play.svg"
+            alt="play button"
+            className="item__btn"
+          />
+        </div>
       </div>
     </div>
   );
