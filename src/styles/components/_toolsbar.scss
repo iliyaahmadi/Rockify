@@ -78,6 +78,7 @@
       background: $gray-800;
       -webkit-transition: 0.2s;
       transition: opacity 0.2s;
+      opacity: 0.8;
       &:hover {
         opacity: 1;
         cursor: pointer;
@@ -120,7 +121,7 @@
     font-size: 35px;
     color: $gray-500;
     &:hover {
-      color: $gray-100;
+      color: white;
       cursor: pointer;
     }
   }
@@ -128,7 +129,7 @@
     color: $gray-500;
     font-size: 20px;
     &:hover {
-      color: $gray-100;
+      color: white;
       cursor: pointer;
     }
   }
@@ -144,7 +145,7 @@
       color: $gray-400;
       font-size: 24px;
       &:hover {
-        color: $gray-100;
+        color: white;
         cursor: pointer;
       }
     }
@@ -162,6 +163,7 @@
       background: $gray-800;
       -webkit-transition: 0.2s;
       transition: opacity 0.2s;
+      opacity: 0.8;
       &:hover {
         opacity: 1;
         cursor: pointer;
