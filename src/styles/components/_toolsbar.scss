@@ -68,30 +68,7 @@
     justify-content: center;
     width: 100%;
     align-items: center;
-    gap: 10px;
-    .slider {
-      direction: ltr;
-      appearance: none;
-      -moz-appearance: none;
-      width: 70%;
-      height: 5px;
-      background: $gray-800;
-      -webkit-transition: 0.2s;
-      transition: opacity 0.2s;
-      opacity: 0.8;
-      &:hover {
-        opacity: 1;
-        cursor: pointer;
-      }
-    }
-    .slider::-webkit-progress-value {
-      background-color: #fff;
-    }
-    .slider::-moz-progress-bar {
-      background-color: #fff;
-      appearance: none;
-      -moz-appearance: none;
-    }
+    gap: 16px;
     .current-time {
       font-family: PeydaLight;
       font-size: 12px;
@@ -126,10 +103,8 @@
     }
   }
   .icon {
-    color: $gray-500;
     font-size: 20px;
     &:hover {
-      color: white;
       cursor: pointer;
     }
   }
@@ -154,27 +129,15 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    .volume__slider {
-      direction: ltr;
-      appearance: none;
-      -moz-appearance: none;
+    .volume-slider {
       width: 60px;
-      height: 5px;
-      background: $gray-800;
-      -webkit-transition: 0.2s;
-      transition: opacity 0.2s;
-      opacity: 0.8;
+    }
+    svg {
+      color: $gray-400;
+      font-size: 24px;
       &:hover {
-        opacity: 1;
+        color: white;
         cursor: pointer;
-      }
-      &::-webkit-progress-value {
-        background-color: #fff;
-      }
-      &::-moz-progress-bar {
-        background-color: #fff;
-        appearance: none;
-        -moz-appearance: none;
       }
     }
   }

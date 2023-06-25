@@ -30,6 +30,7 @@
     height: max-content;
     padding: 0 10px 56px 0;
     li {
+      width: max-content;
       height: max-content;
       display: flex;
       flex-direction: row;
@@ -45,11 +46,10 @@
         padding-top: 3px;
       }
       &:hover {
-        opacity: 0.8;
+        opacity: 0.9;
         cursor: pointer;
-        color: $violet-200;
-        svg {
-          border-right: solid 3px $violet-200;
+        p {
+          color: $violet-200;
         }
       }
     }

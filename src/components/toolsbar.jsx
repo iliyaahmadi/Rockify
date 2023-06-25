@@ -1,4 +1,5 @@
 import '../styles/components/_toolsbar.scss';
+import { useState } from 'react';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder'; //empty
 import FavoriteIcon from '@mui/icons-material/Favorite'; //filled
@@ -9,11 +10,47 @@ import ShuffleIcon from '@mui/icons-material/Shuffle';
 import RepeatIcon from '@mui/icons-material/Repeat';
 import PauseIcon from '@mui/icons-material/Pause';
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
-import VolumeUpIcon from '@mui/icons-material/VolumeUp'; //70%
-import VolumeDownIcon from '@mui/icons-material/VolumeDown'; //30%
-import VolumeMuteIcon from '@mui/icons-material/VolumeMute'; //0%
+import VolumeUpIcon from '@mui/icons-material/VolumeUp';
+import VolumeMuteIcon from '@mui/icons-material/VolumeMute';
+import Slider from '@mui/material/Slider';
 
 function toolsbar() {
+  const [songValue, setSongValue] = useState(30);
+  const [volumeValue, setVolumeValue] = useState(4);
+  const [onRepeat, setOnRepeat] = useState(false);
+  const [onShuffle, setOnShuffle] = useState(false);
+  const [onMute, setOnMute] = useState(false);
+  const [onPause, setOnPause] = useState(false);
+
+  const handleSongSliderChange = (event, newValue) => {
+    setSongValue(newValue);
+  };
+  const handleMute = () => {
+    if (onMute) {
+      setOnMute(false);
+      setVolumeValue(5);
+    } else {
+      setOnMute(true);
+      setVolumeValue(0);
+    }
+  };
+  const handleVolumeSliderChange = (event, newValue) => {
+    setVolumeValue(newValue);
+    if (newValue > 0) {
+      setOnMute(false);
+    } else {
+      setOnMute(true);
+    }
+  };
+  const handleRepeat = () => {
+    onRepeat ? setOnRepeat(false) : setOnRepeat(true);
+  };
+  const handleShuffle = () => {
+    onShuffle ? setOnShuffle(false) : setOnShuffle(true);
+  };
+  const handlePause = () => {
+    onPause ? setOnPause(false) : setOnPause(true);
+  };
   return (
     <div className="toolbar-container">
       <div className="toolbar-container__right tool-right">
@@ -25,21 +62,48 @@ function toolsbar() {
       </div>
       <div className="toolbar-container__middle tool-middle">
         <div className="tool-middle__tools">
-          <RepeatIcon className="repeatIcon icon" />
+          <RepeatIcon
+            className="repeatIcon icon"
+            onClick={handleRepeat}
+            sx={{
+              color: onRepeat ? '#9775fa ' : 'gray',
+              '&:hover': {
+                color: onRepeat ? '#b197fc' : 'white',
+              },
+            }}
+          />
           <SkipNextIcon className="skipnextIcon" />
-          <PauseIcon className="pauseIcon" />
+          {onPause ? (
+            <PauseIcon className="pauseIcon" onClick={handlePause} />
+          ) : (
+            <PlayArrowIcon className="pauseIcon" onClick={handlePause} />
+          )}
           <SkipPreviousIcon className="skippreviousIcon" />
-          <ShuffleIcon className="icon shuffleIcon" />
+          <ShuffleIcon
+            className="icon shuffleIcon"
+            onClick={handleShuffle}
+            sx={{
+              color: onShuffle ? '#9775fa' : 'gray',
+              '&:hover': {
+                color: onShuffle ? '#b197fc' : 'white',
+              },
+            }}
+          />
         </div>
         <div className="tool-middle__slider">
           <div className="current-time">00:00</div>
-          <progress
-            className="slider"
-            type="range"
-            min="1"
-            max="100"
-            value="20"
-            onChange=""
+          <Slider
+            aria-label="Volume"
+            value={songValue}
+            onChange={handleSongSliderChange}
+            min={0}
+            max={100}
+            sx={{
+              color: '#fff',
+              '.MuiSlider-thumb': {
+                boxShadow: '0 0 0 0',
+              },
+            }}
           />
           <div className="total-time">00:00</div>
         </div>
@@ -51,15 +115,27 @@ function toolsbar() {
           <LibraryAddIcon />
         </div>
         <div className="tool-left__volume">
-          <VolumeUpIcon />
-          <progress
-            className="volume__slider"
-            type="range"
-            min="1"
-            max="100"
-            value="20"
-            onChange=""
-          ></progress>
+          {onMute ? (
+            <VolumeMuteIcon onClick={handleMute} />
+          ) : (
+            <VolumeUpIcon onClick={handleMute} />
+          )}
+          <Slider
+            className="volume-slider"
+            color="secondary"
+            aria-label="Volume"
+            min={0}
+            max={10}
+            size="small"
+            value={volumeValue}
+            onChange={handleVolumeSliderChange}
+            sx={{
+              color: '#fff',
+              '.MuiSlider-thumb': {
+                boxShadow: '0 0 0 0',
+              },
+            }}
+          />
         </div>
       </div>
     </div>
