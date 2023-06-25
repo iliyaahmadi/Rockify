@@ -100,8 +100,10 @@ function toolsbar() {
             max={100}
             sx={{
               color: '#fff',
-              '.MuiSlider-thumb': {
-                boxShadow: '0 0 0 0',
+              '& .MuiSlider-thumb': {
+                '&:hover, &.Mui-focusVisible': {
+                  boxShadow: '0 0 0 0',
+                },
               },
             }}
           />
@@ -131,8 +133,10 @@ function toolsbar() {
             onChange={handleVolumeSliderChange}
             sx={{
               color: '#fff',
-              '.MuiSlider-thumb': {
-                boxShadow: '0 0 0 0',
+              '& .MuiSlider-thumb': {
+                '&:hover, &.Mui-focusVisible': {
+                  boxShadow: '0 0 0 0',
+                },
               },
             }}
           />
