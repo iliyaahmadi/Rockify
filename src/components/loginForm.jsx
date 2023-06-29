@@ -6,8 +6,7 @@ function loginForm() {
   return (
     <div className="loginform">
       <div className="loginform__head">
-        <h2>سلام !</h2>
-        <p>ثبت نام کن و رایگان به اهنگ های موردعلاقت گوش بده.</p>
+        <h1>ورود به اکانت</h1>
       </div>
       <form action="">
         <div className="loginform__inputs">
