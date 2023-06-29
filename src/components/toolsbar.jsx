@@ -17,39 +17,39 @@ import Slider from '@mui/material/Slider';
 function toolsbar() {
   const [songValue, setSongValue] = useState(30);
   const [volumeValue, setVolumeValue] = useState(4);
-  const [onRepeat, setOnRepeat] = useState(false);
-  const [onShuffle, setOnShuffle] = useState(false);
-  const [onMute, setOnMute] = useState(false);
-  const [onPause, setOnPause] = useState(false);
+  const [repeat, setRepeat] = useState(false);
+  const [shuffle, setShuffle] = useState(false);
+  const [mute, setMute] = useState(false);
+  const [pause, setPause] = useState(false);
 
   const handleSongSliderChange = (event, newValue) => {
     setSongValue(newValue);
   };
   const handleMute = () => {
-    if (onMute) {
-      setOnMute(false);
+    if (mute) {
+      setMute(false);
       setVolumeValue(5);
     } else {
-      setOnMute(true);
+      setMute(true);
       setVolumeValue(0);
     }
   };
   const handleVolumeSliderChange = (event, newValue) => {
     setVolumeValue(newValue);
     if (newValue > 0) {
-      setOnMute(false);
+      setMute(false);
     } else {
-      setOnMute(true);
+      setMute(true);
     }
   };
   const handleRepeat = () => {
-    onRepeat ? setOnRepeat(false) : setOnRepeat(true);
+    repeat ? setRepeat(false) : setRepeat(true);
   };
   const handleShuffle = () => {
-    onShuffle ? setOnShuffle(false) : setOnShuffle(true);
+    shuffle ? setShuffle(false) : setShuffle(true);
   };
   const handlePause = () => {
-    onPause ? setOnPause(false) : setOnPause(true);
+    pause ? setPause(false) : setPause(true);
   };
   return (
     <div className="toolbar-container">
@@ -66,14 +66,14 @@ function toolsbar() {
             className="repeatIcon icon"
             onClick={handleRepeat}
             sx={{
-              color: onRepeat ? '#9775fa ' : 'gray',
+              color: repeat ? '#9775fa ' : 'gray',
               '&:hover': {
-                color: onRepeat ? '#b197fc' : 'white',
+                color: repeat ? '#b197fc' : 'white',
               },
             }}
           />
           <SkipNextIcon className="skipnextIcon" />
-          {onPause ? (
+          {pause ? (
             <PauseIcon className="pauseIcon" onClick={handlePause} />
           ) : (
             <PlayArrowIcon className="pauseIcon" onClick={handlePause} />
@@ -83,9 +83,9 @@ function toolsbar() {
             className="icon shuffleIcon"
             onClick={handleShuffle}
             sx={{
-              color: onShuffle ? '#9775fa' : 'gray',
+              color: shuffle ? '#9775fa' : 'gray',
               '&:hover': {
-                color: onShuffle ? '#b197fc' : 'white',
+                color: shuffle ? '#b197fc' : 'white',
               },
             }}
           />
@@ -117,7 +117,7 @@ function toolsbar() {
           <LibraryAddIcon />
         </div>
         <div className="tool-left__volume">
-          {onMute ? (
+          {mute ? (
             <VolumeMuteIcon onClick={handleMute} />
           ) : (
             <VolumeUpIcon onClick={handleMute} />
