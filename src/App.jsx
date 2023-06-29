@@ -3,6 +3,8 @@ import './App.scss';
 //pages
 import Home from './pages/home';
 import Discover from './pages/discover';
+import Favorites from './pages/favorites';
+import Playlists from './pages/playlists';
 import Login from './pages/login';
 import Signup from './pages/signup';
 //layout
@@ -23,8 +25,8 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <Home /> },
       { path: '/discover', element: <Discover /> },
-      { path: '/favorites', element: <Home /> },
-      { path: '/playlists', element: <Discover /> },
+      { path: '/favorites', element: <Favorites /> },
+      { path: '/playlists', element: <Playlists /> },
     ],
   },
 ]);
