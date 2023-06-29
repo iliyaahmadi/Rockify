@@ -1,4 +1,4 @@
-import '../styles/components/_discover.scss';
+import '../styles/pages/_discover.scss';
 import Navbar from '../components/navbar';
 import Categories from '../components/categories';
 
