@@ -15,7 +15,7 @@ function signupform() {
           <input type="text" placeholder="ایمیل" />
           <input type="text" placeholder="رمز عبور" />
           <input type="text" placeholder="تکرار رمز عبور" />
-          <button type="submit">ورود</button>
+          <button type="submit">ثبت نام</button>
         </div>
         <div className="signupform__signup">
           <p> قبلا اکانت ساختی ؟</p>
