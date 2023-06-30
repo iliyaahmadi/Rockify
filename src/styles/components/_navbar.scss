@@ -4,17 +4,49 @@
   padding: 10px 40px 10px 30px;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  gap: 15px;
+  justify-content: flex-start;
+  gap: 25px;
   &__greeting {
     font-family: PeydaBold;
     font-size: 26px;
-    margin-left: auto;
     letter-spacing: 1px;
   }
+  &__search {
+    position: relative;
+    input {
+      height: 30px;
+      border: none;
+      border-radius: 20px;
+      background-color: $gray-200;
+      padding: 10px 40px;
+      color: $dark-700;
+      font-family: PeydaLight;
+      &:focus,
+      &:active {
+        border: none;
+      }
+    }
+    .search-icon {
+      position: absolute;
+      top: 5%;
+      margin-right: 6px;
+      font-size: 27px;
+      rotate: 90deg;
+      color: $dark-700;
+    }
+  }
+  &__left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-right: auto;
+  }
+}
+
+.left {
   &__notification {
-    width: 22px;
-    height: 22px;
+    width: 25px;
+    height: 25px;
     padding: 3px;
   }
   &__profile {

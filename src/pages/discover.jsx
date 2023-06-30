@@ -5,7 +5,7 @@ import Categories from '../components/categories';
 function discover() {
   return (
     <div className="discover">
-      <Navbar title="دسته بندی ها" />
+      <Navbar title="دسته بندی ها" search={true} />
       <Categories />
     </div>
   );
