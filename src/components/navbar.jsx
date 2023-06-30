@@ -4,7 +4,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import { useState } from 'react';
 
 function navbar(props) {
-  const [isLogin, setIsLogin] = useState(true);
+  const [isLogin, setIsLogin] = useState(false);
   return (
     <div className="navbar">
       <p className="navbar__greeting">{props.title}</p>
