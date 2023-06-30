@@ -14,21 +14,25 @@
   &__search {
     position: relative;
     input {
-      height: 30px;
+      height: 35px;
       border: none;
       border-radius: 20px;
       background-color: $gray-200;
-      padding: 10px 40px;
+      padding: 0 40px;
       color: $dark-700;
       font-family: PeydaLight;
       &:focus,
       &:active {
         border: none;
       }
+      &::placeholder {
+        color: rgb(35, 35, 35);
+        padding: 4px 0;
+      }
     }
     .search-icon {
       position: absolute;
-      top: 5%;
+      top: 8%;
       margin-right: 6px;
       font-size: 27px;
       rotate: 90deg;

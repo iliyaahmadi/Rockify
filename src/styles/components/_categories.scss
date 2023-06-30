@@ -22,14 +22,6 @@
       @include blur(3px, $blur-color-blue);
     }
   }
-  &__items {
-    grid-template-areas:
-      'item item item item'
-      'item item item item'
-      'item item item item';
-    grid-template-columns: 1fr 4fr 4fr;
-    gap: 20px;
-  }
 }
 
 .categories-head {
