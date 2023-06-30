@@ -15,6 +15,8 @@ function playlists() {
         <PlaylistBox />
         <PlaylistBox />
         <PlaylistBox />
+        <PlaylistBox />
+        <PlaylistBox />
       </div>
     </div>
   );
