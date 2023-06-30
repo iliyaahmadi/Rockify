@@ -12,7 +12,7 @@ function loginForm() {
         <div className="loginform__inputs">
           <input type="text" placeholder="نام کاربری" />
           <input type="text" placeholder="رمز عبور" />
-          <button type="submit">ورود</button>
+          <Link to='/'><button type="submit">ورود</button></Link>
         </div>
         <div className="loginform__signup">
           <p>اکانت نداری؟</p>

@@ -19,7 +19,7 @@ function signupform() {
         </div>
         <div className="signupform__signup">
           <p> قبلا اکانت ساختی ؟</p>
-          <Link to="/login">ثبت نام</Link>
+          <Link to="/login">ورود</Link>
         </div>
       </form>
       <div className="signupform__seporator">یا ادامه بده با</div>
