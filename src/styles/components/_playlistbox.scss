@@ -1,0 +1,34 @@
+@import '../main';
+
+.box {
+  position: relative;
+  width: 270px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: $dark-700;
+  border-radius: 10px;
+  gap: 4px;
+  &__img {
+    width: 100%;
+    height: 200px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: white;
+    border-radius: 10px;
+  }
+  &__title {
+    margin: 25px 10px 0 0;
+    h2 {
+      margin: 0;
+    }
+  }
+  &__owner {
+    margin: 0 10px 0 0;
+    display: flex;
+    gap: 6px;
+    color: $dark-100;
+  }
+}
